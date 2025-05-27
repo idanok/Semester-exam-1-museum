@@ -1,63 +1,67 @@
+/* Responsive and optimized contact.css */
 @import url("global.css");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
 
 .main-content {
     padding: 2rem;
 }
 
-
-/* Main image*/
+/* Main image */
 .main-image-lab img {
     width: 100%;
-    height: 180px;
+    height: 200px;
+    object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
     .main-image-lab img {
-        height: 180px;
-        margin-top: 10px;
+        height: 300px;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Desktop */
+@media (min-width: 1025px) {
     .main-image-lab img {
-        height: 280px;
-        margin-top: 15px;
+        height: 450px;
+        margin-top: 50px;
     }
 }
 
-@media screen and (min-width: 1025px) {
-    .main-image-lab img {
-        height: 380px;
-        margin-top: 20px;
-    }
-}
-
-
-
-/* Main content: Contact form */
+/* Contact form and information layout */
 .contact-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-form {
-    background-color: #fff;
-    padding: 50px;
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;
-    border: 5px solid #C7B72C;
+.contact-form,
+.contact-information {
+    background-color: hsl(50, 60%, 90%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
 }
 
-.main-content h2 {
-    font-family: comic sans MS;
-    font-size: 22px;
+.contact-form {
+    border: 5px solid #C7B72C;
     text-align: center;
-    margin-top: 50px;
+}
+
+.contact-form h2 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 22px;
+    margin-bottom: 1.5rem;
 }
 
 .contact-form input,
@@ -67,240 +71,142 @@
     margin: 10px 0;
     border: 1px solid #C7B72C;
     border-radius: 5px;
-}
-
-.contact-form input[placeholder="Full name:"] {
-    margin-top: 10px;
-}
-
-.contact-form input[placeholder="Message:"] {
-    margin-top: 10px;
+    font-size: 1rem;
 }
 
 .contact-form input {
-    height: 20px;
+    height: 40px;
 }
 
 .contact-form textarea {
-    height: 100px;
+    resize: vertical;
+    min-height: 100px;
 }
 
 .contact-form button {
     background-color: #C7B72C;
-    background-color: hsl(50, 60%, 90%);
-    color: #000000;
-    font-size: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 1rem;
+    padding: 12px 24px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    text-decoration: underline;
+    background-color: #b1a321;
+    text-decoration: none;
 }
 
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .main-content h2 {
-        font-size: 26px;
-        margin-top: 100px;
-    }
-
-    .contact-form {
-        width: 400px;
-        height: 400px;
-        margin-top: 60px;
-    }
-
-    .contact-form input {
-        width: 400px;
-        height: 25px;
-    }
-
-    .contact-form textarea {
-        width: 400px;
-        height: 150px;
-    }
-
-    .contact-form button {
-        width: 180px;
-        height: 35px;
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form,
-    .contact-information {
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .main-content h2 {
-        font-size: 30px;
-        margin-top: 130px;
-    }
-
-    .contact-form {
-        width: 30%;
-        height: 450px;
-        margin-top: 100px;
-        margin-left: 6%;
-    }
-
-    .contact-form input {
-        width: 100%;
-        height: 35px;
-    }
-
-    .contact-form textarea {
-        width: 100%;
-        height: 200px;
-    }
-
-    .contact-form button {
-        width: 180px;
-        height: 40px;
-        font-size: 13px;
-        margin-top: 5px;
-    }
-}
-
-
-/* Main content: Contact information */
+/* Contact Information */
 .contact-information {
-    background-color: #C7B72C;
-    background-color: hsl(50, 60%, 90%);
-    padding: 50px;
-    width: 380px;
-    height: 400px;
-    margin: 20px auto;
-    color: #000000;
-    border-radius: 5px;
-    margin-top: 100px;
-}
-
-.contact-information img {
-    width: 15px;
-    margin-right: -200px;
-}
-
-.contact-information img[src="img/call.png"] {
-    display: block;
-    margin: 0 9px;
-}
-
-.contact-information img[src="img/email.png"] {
-    display: block;
-    margin: 0 9px;
-}
-
-.horizontally-aligned p {
-    font-size: 12px;
-}
-
-.contact-information p {
-    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .horizontally-aligned {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.opening-hours h3 {
-    font-size: 13px;
-    margin-left: 15px;
-    margin-top: 50px;
+.contact-information img {
+    width: 20px;
 }
 
-.opening-hours p {
-    font-size: 12px;
-    margin-left: 15px;
+.opening-hours h3,
+.address h3 {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
 }
 
-.adress p {
-    font-size: 12px;
-    margin-left: 15px;
-    margin-top: 80px;
+.opening-hours ul {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-.adress h3 {
-    font-size: 13px;
-    margin-left: 15px;
+.address p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .contact-information {
-        width: 500px;
-        height: 500px;
-    }
-
-    .contact-information img {
-        width: 18px;
-    }
-
-    .horizontally-aligned p {
-        font-size: 16px;
-    }
-
-    .opening-hours h3 {
-        font-size: 16px;
-        margin-top: 80px;
-    }
-
-    .opening-hours p {
-        font-size: 16px;
-    }
-
-    .adress p {
-        font-size: 16px;
-        margin-top: 100px;
-    }
-
-    .adress h3 {
-        font-size: 16px;
-    }
-}
-
+/* Responsive layout */
 @media (min-width: 1025px) {
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .contact-form,
     .contact-information {
-        width: 38%;
-        height: 640px;
-        margin-left: 50%;
+        width: 45%;
+        margin: 2rem 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px 24px;
     }
 
     .contact-information img {
-        width: 21px;
+        width: 24px;
     }
 
-    .horizontally-aligned p {
+    .horizontally-aligned p,
+    .opening-hours p,
+    .address p {
+        font-size: 1.1rem;
+    }
+
+    .opening-hours h3,
+    .address h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .contact-form,
+    .contact-information {
+        width: 100%;
+    }
+
+    .contact-form h2 {
         font-size: 20px;
     }
 
-    .opening-hours h3 {
-        font-size: 20px;
-        margin-top: 100px;
+    .contact-form button {
+        width: 100%;
     }
 
-    .opening-hours p {
-        font-size: 20px;
+    .contact-information img {
+        width: 16px;
     }
 
-    .adress p {
-        font-size: 20px;
-        margin-top: 100px;
+    .opening-hours h3,
+    .address h3 {
+        font-size: 0.95rem;
     }
 
-    .adress h3 {
-        font-size: 20px;
+    .horizontally-aligned p,
+    .opening-hours p,
+    .address p {
+        font-size: 0.9rem;
     }
 }

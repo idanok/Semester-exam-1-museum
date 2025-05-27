@@ -1,19 +1,19 @@
 html,
 body {
     height: 100%;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
-/* Header layout */
+/* Header Layout */
 .header {
     display: flex;
     flex-direction: column-reverse;
-    /* Flip the order so logo appears first */
     align-items: center;
     padding: 10px 20px;
+    position: relative;
 }
 
 .top-bar {
@@ -21,61 +21,50 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
-/* Top bar items */
-.search-container,
-.hamburger-menu,
-.desktop-menu {
-    flex: 1;
-}
-
-/* Hide the checkbox */
 .menu-toggle {
     display: none;
 }
 
-/* Hamburger Icon */
 .hamburger-icon {
+    position: absolute;
+    top: 10px; /* 👈 was 15px */
+    left: 15px;
     font-size: 28px;
     cursor: pointer;
     padding: 10px 15px;
-    display: inline-block;
-    z-index: 1001;
-    position: fixed;
-    top: 15px;
-    left: 15px;
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
 }
 
-/* Side Menu */
+
 .side-menu {
     height: 100%;
     width: 250px;
-    background-color: #fff;
     position: fixed;
     top: 0;
     left: -250px;
     padding-top: 60px;
+    background: #fff;
     transition: left 0.3s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-/* Open menu when checkbox is checked */
-.menu-toggle:checked+.hamburger-icon+.side-menu {
+.menu-toggle:checked + .hamburger-icon + .side-menu {
     left: 0;
 }
 
-/* Menu links */
 .side-menu a {
     display: block;
     padding: 16px 30px;
+    font-size: 18px;
     color: #333;
     text-decoration: none;
-    font-size: 18px;
     transition: background 0.2s ease;
 }
 
@@ -83,7 +72,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Close button inside menu */
 .side-menu .close-btn {
     position: absolute;
     top: 15px;
@@ -93,49 +81,37 @@ body {
     color: #333;
 }
 
-/* Desktop menu */
 .desktop-menu {
-    order: 1;
     display: none;
-    text-align: left;
+    text-align: center;
 }
 
 @media (min-width: 1024px) {
-    @media (min-width: 1024px) {
-        .desktop-menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 1rem;
-            width: 100%;
-        }
-
-        .desktop-menu ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .desktop-menu li {
-            margin: 0;
-        }
-
-        .desktop-menu a {
-            text-decoration: none;
-            color: #000;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .desktop-menu a:hover {
-            text-decoration: underline;
-        }
+    .desktop-menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
     }
 
+    .desktop-menu ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .desktop-menu a {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .desktop-menu a:hover {
+        text-decoration: underline;
+    }
 
     .menu-toggle,
     .hamburger-icon,
@@ -145,13 +121,11 @@ body {
 }
 
 .search-container {
-    order: 2;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-/* Logo */
 .logo {
     text-align: center;
     margin-top: 10px;
@@ -159,17 +133,16 @@ body {
 
 .logo img {
     width: 130px;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
 }
 
 .logo h1 {
     font-size: 24px;
-    font-style: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 3px;
-    transition: transform 0.3s ease-in-out;
     color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo h1:hover {
@@ -181,16 +154,15 @@ body {
 }
 
 .logo h1 span.black {
-    color: #000000;
+    color: #000;
 }
 
 .header a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
 }
 
-/* Responsive logo adjustments */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .logo img {
         width: 100px;
     }
@@ -200,13 +172,12 @@ body {
     }
 }
 
-/* --- FOOTER --- */
+/* Footer */
 .site-footer {
     background-color: #A4E8B0;
-    color: #000000;
+    color: #000;
     padding: 10px;
-    margin-bottom: auto;
-    margin-top: 100px;
+    margin: 100px 0 0;
 }
 
 .footer-content {
@@ -216,10 +187,10 @@ body {
 }
 
 .footer-content img {
-    width: 60px;
-    height: 60px;
     border-radius: 10px;
     margin-top: 20px;
+    width: 60px;
+    height: 60px;
 }
 
 .footer-content h1 {
@@ -227,53 +198,40 @@ body {
     font-size: 14px;
 }
 
-.site-footer h2 {
-    font-size: 15px;
-    margin-top: 20px;
-    letter-spacing: 0.5px;
-}
-
-.site-footer h3 {
-    font-size: 10px;
-    margin-top: 30px;
-    letter-spacing: 0.5px;
-}
-
-.site-footer p {
-    font-size: 10px;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-}
-
+.site-footer h2,
+.site-footer h3,
+.site-footer p,
 .site-footer .copyright {
     font-size: 10px;
+    letter-spacing: 0.5px;
+    line-height: 0.4;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 30px;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .footer-content img {
         width: 80px;
+        height: 80px;
     }
 
     .footer-content h1 {
         font-size: 18px;
     }
 
-    .site-footer h2 {
-        font-size: 18px;
-    }
-
+    .site-footer h2,
     .site-footer h3,
     .site-footer p,
     .site-footer .copyright {
         font-size: 12px;
+        color: #000;
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
     .footer-content img {
         width: 100px;
+        height: 100px;
     }
 
     .footer-content h1 {
@@ -288,11 +246,9 @@ body {
         font-size: 16px;
     }
 
-    .site-footer p {
-        font-size: 15px;
-    }
-
+    .site-footer p,
     .site-footer .copyright {
         font-size: 15px;
+        line-height: 1;
     }
 }
