@@ -1,1 +1,1 @@
-# Semester-exam-1-museum
+This website is called Lyngdal Science Museum and shows 
