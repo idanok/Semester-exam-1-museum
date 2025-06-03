@@ -1,5 +1,13 @@
-/* Updated home.css to align opening hours list with the image on large screens */
 @import url("global.css");
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
 
 .main-content {
     width: 90%;

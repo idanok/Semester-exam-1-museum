@@ -1,4 +1,3 @@
-/* Responsive and optimized contact.css */
 @import url("global.css");
 
 html,
@@ -13,21 +12,18 @@ body {
     padding: 2rem;
 }
 
-/* Main image */
 .main-image-lab img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
     .main-image-lab img {
         height: 300px;
     }
 }
 
-/* Desktop */
 @media (min-width: 1025px) {
     .main-image-lab img {
         height: 450px;
@@ -35,7 +31,6 @@ body {
     }
 }
 
-/* Contact form and information layout */
 .contact-form-container {
     display: flex;
     justify-content: center;
@@ -101,8 +96,6 @@ body {
     text-decoration: none;
 }
 
-
-/* Contact Information */
 .contact-information {
     display: flex;
     flex-direction: column;
@@ -136,7 +129,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Responsive layout */
 @media (min-width: 1025px) {
     .main-content {
         display: flex;

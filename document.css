@@ -1,175 +1,98 @@
 @import url("global.css");
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
 .main-content {
     padding: 2rem;
 }
 
+.privacy-policy,
+.terms-conditions {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
-/* Main content: privacy policy and terms and conditions */
-.privacy-policy h2 {
+
+.privacy-policy h2,
+.terms-conditions h2 {
     font-size: 22px;
     margin-top: 80px;
-    margin-left: 50px;
-}
-
-.privacy-policy h3 {
-    font-size: 13px;
-    margin-left: 50px;
-}
-
-.privacy-policy p {
-    font-size: 12px;
-    margin-left: 50px;
-}
-
-.privacy-policy ul {
-    font-size: 12px;
-    margin-left: 50px;
-}
-
-.privacy-policy li {
-    font-size: 12px;
-    margin-right: 100px;
 }
 
 .terms-conditions h2 {
-    font-size: 22px;
     margin-top: 120px;
-    margin-left: 50px;
 }
 
-.terms-conditions h3 {
-    font-size: 13px;
-    margin-left: 50px;
-}
-
-.terms-conditions p {
-    font-size: 12px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.terms-conditions ul {
-    font-size: 12px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
+.privacy-policy h3,
+.terms-conditions h3,
+.privacy-policy p,
+.terms-conditions p,
+.privacy-policy ul,
+.terms-conditions ul,
+.privacy-policy li,
 .terms-conditions li {
-    font-size: 12px;
-    margin-left: -25px;
+    font-size: 16px;
 }
 
+.privacy-policy li {
+    margin-right: 100px;
+}
+
+.terms-conditions p,
+.terms-conditions ul {
+    margin-right: 50px;
+}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .privacy-policy,
+    .terms-conditions {
+        padding: 0 80px;
+    }
+
     .privacy-policy h2 {
         font-size: 26px;
-        margin-top: 80px;
-        margin-left: 80px;
     }
-
-    .privacy-policy h3 {
-        font-size: 16px;
-        margin-left: 80px;
-    }
-
-    .privacy-policy p {
-        font-size: 16px;
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-
-    .privacy-policy ul {
-        font-size: 16px;
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-
-    .privacy-policy li {
-        font-size: 16px;
-    }
-
 
     .terms-conditions h2 {
         font-size: 26px;
         margin-top: 120px;
-        margin-left: 80px;
-    }
-
-    .terms-conditions h3 {
-        font-size: 16px;
-        margin-left: 80px;
-    }
-
-    .terms-conditions p {
-        font-size: 16px;
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-
-    .terms-conditions ul {
-        font-size: 16px;
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-
-    .terms-conditions li {
-        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1025px) {
-    .privacy-policy h2 {
-        font-size: 30px;
-        margin-top: 100px;
-        margin-left: 150px;
+
+    .privacy-policy,
+    .terms-conditions {
+        padding: 0 150px;
     }
 
-    .privacy-policy h3 {
-        font-size: 20px;
-        margin-left: 150px;
-    }
-
-    .privacy-policy p {
-        font-size: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
-    .privacy-policy ul {
-        font-size: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
-    .privacy-policy li {
-        font-size: 20px;
-    }
-
-
+    .privacy-policy h2,
     .terms-conditions h2 {
         font-size: 30px;
+    }
+
+    .privacy-policy h2 {
+        margin-top: 100px;
+    }
+
+    .terms-conditions h2 {
         margin-top: 200px;
-        margin-left: 150px;
     }
 
-    .terms-conditions h3 {
-        font-size: 20px;
-        margin-left: 150px;
-    }
-
-    .terms-conditions p {
-        font-size: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
-    .terms-conditions ul {
-        font-size: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
+    .privacy-policy h3,
+    .terms-conditions h3,
+    .privacy-policy p,
+    .terms-conditions p,
+    .privacy-policy ul,
+    .terms-conditions ul,
+    .privacy-policy li,
     .terms-conditions li {
         font-size: 20px;
     }
